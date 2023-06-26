@@ -1,0 +1,90 @@
+body {
+  min-width: 600px;
+}
+
+/* header 부분 */
+.header #head_title {
+  background-color: rgb(29, 160, 160);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  font-size: 40px;
+}
+.header .head_title {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+.header #head_home {
+  background-color: rgb(29, 160, 160);
+  color: white;
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_notice {
+  background-color: rgb(128, 148, 127);
+  color: white;
+  width: 34%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_notice:hover {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  width: 34%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_create {
+  background-color: rgb(128, 148, 127);
+  color: white;
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_create:hover {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* article */
+main article div {
+  margin: 10px 10px 0 10px;
+}
+main article div h3 {
+  margin: 0;
+}
+
+/* footer부분 */
+.footer .footer_content {
+  margin: 10px 10px 0 10px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer_date {
+  margin: 10px 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

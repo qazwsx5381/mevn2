@@ -1,0 +1,351 @@
+body {
+  min-width: 600px;
+}
+
+/* header 부분 */
+.header #head_title {
+  background-color: rgb(29, 160, 160);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  font-size: 40px;
+}
+.header .head_title {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+.header #head_home {
+  background-color: rgb(128, 148, 127);
+  color: white;
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_home:hover {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_notice {
+  background-color: rgb(29, 160, 160);
+  color: white;
+  width: 34%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_create {
+  background-color: rgb(128, 148, 127);
+  color: white;
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_create:hover {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* article */
+.main {
+  display: block;
+}
+.main .main_content {
+  margin: 20px 10px;
+  margin-bottom: 0;
+  border-bottom: 1px solid black;
+}
+.main h3 {
+  margin: 0 0;
+}
+.main .main_list {
+  width: 98%;
+  background-color: yellowgreen;
+  margin: 10px 10px 0 10px;
+  height: 30px;
+  color: black;
+  border-collapse: collapse;
+}
+.main .main_listTitle .main_number {
+  width: 8%;
+}
+.main .main_listTitle .main_title {
+  width: 40%;
+}
+.main .main_listTitle .main_name {
+  width: 20%;
+}
+.main .main_listTitle .main_count {
+  width: 15%;
+}
+.main .main_listTitle .main_time {
+  width: 15%;
+}
+
+/* article 자세히 보기 부분 */
+.show {
+  width: auto;
+  display: none;
+  margin: 10px;
+}
+.show_id,
+.show_title,
+.show_count,
+.show_name,
+.show_time {
+  display: flex;
+  margin-top: 10px;
+}
+.show_content {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.show_id #show_id {
+  width: 10%;
+}
+.show_id #show_id_value {
+  width: 90%;
+}
+.show_title #show_title {
+  width: 10%;
+}
+.show_title #show_title_value {
+  width: 90%;
+}
+.show_count #show_count {
+  width: 10%;
+}
+.show_count #show_count_value {
+  width: 90%;
+}
+.show_name #show_name {
+  width: 10%;
+}
+.show_name #show_name_value {
+  width: 90%;
+}
+.show_time #show_time {
+  width: 10%;
+}
+.show_time #show_time_value {
+  width: 90%;
+}
+.show_content #show_content {
+  width: 10%;
+}
+.show_content #show_content_value {
+  width: 90%;
+}
+
+/* article 수정 부분 */
+.edit {
+  /* display: block; */
+  display: none;
+}
+.con_create {
+  margin: 10px;
+}
+.con_create .con_title {
+  display: flex;
+  height: 30px;
+}
+.con_create .con_title #con_title {
+  width: 10%;
+}
+.con_create .con_title #title_input {
+  width: 90%;
+}
+.con_create .con_content {
+  display: flex;
+  height: 200px;
+  margin-top: 10px;
+}
+.con_create .con_content #con_content {
+  width: 10%;
+}
+.con_create .con_content #content_input {
+  width: 90%;
+}
+.con_create .con_name {
+  display: flex;
+  height: 30px;
+  margin-top: 10px;
+}
+.con_create .con_name #con_name {
+  width: 10%;
+}
+.con_create .con_name #name_input {
+  width: 90%;
+}
+.con_create .con_file {
+  display: flex;
+  height: 30px;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+.con_create .con_file #con_file {
+  width: 10%;
+}
+
+/* article 버튼 */
+.btn {
+  margin: 10px 10px 0 10px;
+}
+.btn_main {
+  display: flex;
+}
+.btn #create {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(219, 79, 79);
+  color: white;
+}
+.btn #create:hover {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(209, 133, 133);
+  color: white;
+}
+
+.btn_list {
+  display: none;
+}
+
+.btn .btn_list #btn_list {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(219, 79, 79);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_list:hover {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(209, 133, 133);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_edit {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(42, 168, 63);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_edit:hover {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(150, 207, 159);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_del {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(173, 175, 56);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_del:hover {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(191, 192, 140);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_pre {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(79, 210, 219);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_pre:hover {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(128, 172, 175);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_next {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(186, 79, 219);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_next:hover {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(190, 138, 206);
+  color: white;
+  margin-right: 10px;
+}
+.btn_edit {
+  display: none;
+}
+.btn .btn_edit #btn_edit_1 {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(42, 168, 63);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_edit #btn_edit_1:hover {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(150, 207, 159);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_edit #btn_del_1 {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(173, 175, 56);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_edit #btn_del_1:hover {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(191, 192, 140);
+  color: white;
+  margin-right: 10px;
+}
+
+/* footer부분 */
+.footer .footer_content {
+  margin: 10px 10px 0 10px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer_date {
+  margin: 10px 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

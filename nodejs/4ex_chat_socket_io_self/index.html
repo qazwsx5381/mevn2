@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #s_msg {
+        list-style-type: none;
+        padding-left: 10px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      #s_msg li {
+        margin-top: 10px;
+        position: relative;
+        top: 0px;
+        bottom: 50px;
+      }
+      #s_msg li:last-child {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        bottom: 50px;
+      }
+      #s_msg #count {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: aquamarine;
+        width: 20%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #s_f_msg {
+        background-color: lightgray;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        height: 50px;
+      }
+      #s_f_msg #s_i_msg {
+        width: 80%;
+        height: 30px;
+      }
+      #s_f_msg #s_b_msg {
+        width: 15%;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="s_msg">
+      <div id="count">
+        <span id="user">접속자 수는?</span>
+        <span id="user_count"></span>
+      </div>
+      <form action="#" id="s_f_msg">
+        <input type="text" id="s_i_msg" /><button id="s_b_msg">전송</button>
+      </form>
+    </ul>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io()
+      const form = document.getElementById('s_f_msg')
+      const input = document.getElementById('s_i_msg')
+      const messages = document.getElementById('s_msg')
+
+      socket.on('users.count', function (number) {
+        document.getElementById('user_count').innerHTML = number
+      })
+      form.addEventListener('submit', function (e) {
+        e.preventDefault()
+        if (input.value) {
+          socket.emit('chat message', input.value)
+          const item = document.createElement('li')
+          item.textContent = input.value
+          item.style.display = 'flex'
+          item.style.flexDirection = 'row-reverse'
+          item.style.marginRight = '10px'
+          messages.appendChild(item)
+          window.scrollTo(0, document.body.scrollHeight)
+          input.value = ''
+        }
+      })
+      socket.on('chat message', function (msg) {
+        const item = document.createElement('li')
+        item.textContent = msg
+        messages.appendChild(item)
+        window.scrollTo(0, document.body.scrollHeight)
+      })
+    </script>
+  </body>
+</html>

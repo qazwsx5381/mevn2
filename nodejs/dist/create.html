@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글 작성페이지</title>
+    <link rel="stylesheet" href="./css/create.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("head_home").addEventListener("click", () => {
+          window.location = "./index.html";
+        });
+        document.getElementById("head_notice").addEventListener("click", () => {
+          window.location = "./noticeboard.html";
+        });
+        document.getElementById("head_create").addEventListener("click", () => {
+          window.location = "./create.html";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div id="head_title">예찬의 게시판</div>
+      <nav class="head_title">
+        <div id="head_home">HOME</div>
+        <div id="head_notice">게시판</div>
+        <div id="head_create">글작성</div>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <section>
+          <div class="con_create">
+            <div class="con_title">
+              <span id="con_title">제목</span>
+              <input
+                type="text"
+                placeholder="제목을 입력하세요"
+                id="title_input"
+                required
+              />
+            </div>
+            <div class="con_content">
+              <span id="con_content">내용</span>
+              <textarea
+                type="text"
+                placeholder="내용을 입력하세요"
+                id="content_input"
+                required
+              ></textarea>
+            </div>
+            <div class="con_name">
+              <span id="con_name">작성자</span>
+              <input
+                type="text"
+                placeholder="닉네임을 입력하세요"
+                id="name_input"
+                required
+              />
+            </div>
+            <div class="con_file">
+              <span id="con_file">파일 업로드</span>
+              <input type="file" />
+            </div>
+          </div>
+        </section>
+      </article>
+      <article class="btn">
+        <section>
+          <div class="btn_list">
+            <button type="button" id="btn_save">저장</button>
+            <button type="button" id="btn_list">목록</button>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="footer_content"><small>만든이 : 류예찬</small></div>
+      <div class="footer_date"><small>만든 날짜 : 2023-06-14</small></div>
+    </footer>
+
+    <script src="./js/create.js"></script>
+  </body>
+</html>

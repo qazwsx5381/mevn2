@@ -1,0 +1,44 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.line2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.line1 span {
+  width: 15%;
+  text-align: center;
+}
+.line1 input {
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.line1 input:focus {
+  outline: none;
+  text-decoration: underline;
+}
+.line2 span {
+  width: 15%;
+  text-align: center;
+}
+.line2 textarea {
+  width: 80%;
+  resize: none;
+  border: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.line2 textarea:focus {
+  outline: none;
+}

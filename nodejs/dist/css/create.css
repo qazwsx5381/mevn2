@@ -1,0 +1,163 @@
+body {
+  min-width: 600px;
+}
+
+/* header 부분 */
+.header #head_title {
+  background-color: rgb(29, 160, 160);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  font-size: 40px;
+}
+.header .head_title {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+.header #head_home {
+  background-color: rgb(128, 148, 127);
+  color: white;
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_home:hover {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_notice {
+  background-color: rgb(128, 148, 127);
+  color: white;
+  width: 34%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_notice:hover {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  width: 34%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header #head_create {
+  background-color: rgb(29, 160, 160);
+  color: white;
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* article */
+.con_create {
+  margin: 10px;
+}
+.con_create .con_title {
+  display: flex;
+  height: 30px;
+}
+.con_create .con_title #con_title {
+  width: 10%;
+}
+.con_create .con_title #title_input {
+  width: 90%;
+}
+.con_create .con_content {
+  display: flex;
+  height: 200px;
+  margin-top: 10px;
+}
+.con_create .con_content #con_content {
+  width: 10%;
+}
+.con_create .con_content #content_input {
+  width: 90%;
+}
+.con_create .con_name {
+  display: flex;
+  height: 30px;
+  margin-top: 10px;
+}
+.con_create .con_name #con_name {
+  width: 10%;
+}
+.con_create .con_name #name_input {
+  width: 90%;
+}
+.con_create .con_file {
+  display: flex;
+  height: 30px;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+.con_create .con_file #con_file {
+  width: 10%;
+}
+
+.btn .btn_list {
+  display: flex;
+  padding: 0 10px;
+}
+
+.btn .btn_list #btn_list {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(219, 79, 79);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_list:hover {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(209, 133, 133);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_save {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(42, 168, 63);
+  color: white;
+  margin-right: 10px;
+}
+.btn .btn_list #btn_save:hover {
+  padding: 5px 10px;
+  border: 0px;
+  background-color: rgb(150, 207, 159);
+  color: white;
+  margin-right: 10px;
+}
+
+/* footer부분 */
+.footer .footer_content {
+  margin: 10px 10px 0 10px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer_date {
+  margin: 10px 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

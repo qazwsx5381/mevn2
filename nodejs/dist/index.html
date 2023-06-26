@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/home.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("head_home").addEventListener("click", () => {
+          window.location = "./index.html";
+        });
+        document.getElementById("head_notice").addEventListener("click", () => {
+          window.location = "./noticeboard.html";
+        });
+        document.getElementById("head_create").addEventListener("click", () => {
+          window.location = "./create.html";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div id="head_title">예찬의 게시판</div>
+      <nav class="head_title">
+        <div id="head_home">HOME</div>
+        <div id="head_notice">게시판</div>
+        <div id="head_create">글작성</div>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <section>
+          <div><h3>최신글</h3></div>
+        </section>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="footer_content"><small>만든이 : 류예찬</small></div>
+      <div class="footer_date"><small>만든 날짜 : 2023-06-14</small></div>
+    </footer>
+  </body>
+</html>

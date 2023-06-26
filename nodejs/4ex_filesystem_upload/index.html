@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파일 업로드</title>
+    <script>
+      /* 파일 사이즈 제한 */
+      function checkSize(input) {
+        const ss = 10
+        if (input.files[0].size > ss * 1024 * 1024) {
+          // 10*1024*1024 = 10MB의 사이즈
+          alert(`파일용량이 초과되었습니다.(최대 : ${ss}MB)`)
+          input.value = null
+        } else {
+          const name = document.getElementById('file_name')
+          name.textContent = input.files[0].name
+        }
+      }
+    </script>
+    <style>
+      #fileCss {
+        display: none;
+      }
+      label#file_label {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        font-size: xx-large;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+        background-color: lightblue;
+      }
+      label#file_label:hover {
+        background-color: rgb(7, 63, 82);
+        color: white;
+      }
+      label#file_label:active {
+        background-color: rgb(18, 122, 156);
+        color: white;
+      }
+      input#s_file {
+        width: auto;
+        padding: 5px 10px;
+        border: none;
+      }
+      input#s_file:hover {
+        width: auto;
+        padding: 5px 10px;
+        border: none;
+        background-color: rgb(94, 94, 94);
+        color: white;
+      }
+      #file_name {
+        color: gray;
+      }
+      input#c_f_input {
+        border: none;
+        width: 25%;
+        margin-right: 10px;
+      }
+      input#c_f_input:focus {
+        outline: none;
+        border-bottom: 1px solid black;
+        width: 25%;
+      }
+      input#c_f_btn {
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/up" method="post" enctype="multipart/form-data">
+      <input type="file" name="ufile" id="fileCss" onchange="checkSize(this)" />
+      <label for="fileCss" id="file_label"><div>+</div></label>
+      <input type="submit" value="전송" id="s_file" />
+      <div id="file_name">파일을 올려주세요</div>
+    </form>
+    <hr />
+    <form action="/mkdir">
+      <input
+        type="text"
+        placeholder="생성할 폴더 이름을 입력하세요."
+        name="mk"
+        id="c_f_input"
+      /><input type="submit" value="생성" id="c_f_btn" />
+    </form>
+    <hr />
+    <form action="/list">
+      <button id="f_list">파일목록</button>
+    </form>
+  </body>
+</html>
