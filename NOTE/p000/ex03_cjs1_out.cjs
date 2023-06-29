@@ -1,5 +1,4 @@
-const ship = require('./ex03_cjs1_in.cjs')
-console.log(ship)
-console.log(ship.a)
-
-console.log(typeof ship)
+const a = '에이'
+const b = '비'
+exports.a = a
+exports.b = b

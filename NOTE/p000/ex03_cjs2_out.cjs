@@ -1,2 +1,3 @@
-const {c,d} = require('./ex03_cjs2_in.cjs')
-console.log(c,d)
+const c = '씨이'
+const d = '디이'
+module.exports ={c,d}
