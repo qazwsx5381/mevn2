@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2></h2>
+    <form action="#">
+      <input type="number" required />달러
+      <button>변환</button>
+    </form>
+    <h1></h1>
+    <h1 class="buy"></h1>
+    <h1 class="sell"></h1>
+    <script>
+      const url =
+        'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD'
+      fetch(url).then((res) =>
+        res.json().then((data) => {
+          console.log(data[0])
+          document.querySelector(
+            'h2'
+          ).textContent = `현재 환율은 ${data[0].basePrice}원입니다.`
+          document.querySelector('form').addEventListener('submit', (e) => {
+            let price = e.target[0].value
+            document.querySelector(
+              'h1'
+            ).textContent = `현재 ${price}달러의  원화가격은 ${(
+              price *
+              data[0].basePrice *
+              1
+            ).toLocaleString('ko-kr')}원입니다.`
+            document.querySelector(
+              'h1.buy'
+            ).textContent = `현재 ${price}달러의 구매가격은 ${(
+              price *
+              data[0].cashBuyingPrice *
+              1
+            ).toLocaleString('ko-kr')}원입니다.`
+            document.querySelector(
+              'h1.sell'
+            ).textContent = `현재 ${price}달러의 판매가격은 ${(
+              price *
+              data[0].cashSellingPrice *
+              1
+            ).toLocaleString('ko-kr')}원입니다.`
+            price = ''
+          })
+        })
+      )
+    </script>
+  </body>
+</html>
