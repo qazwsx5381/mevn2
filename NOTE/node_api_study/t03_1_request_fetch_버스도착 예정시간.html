@@ -30,15 +30,28 @@
       const api_key = config.bus_apikey
       const bstop = document.getElementById('bStopCount')
       let bstop_select = ''
+
       bstop.addEventListener('change', (e) => {
         bstop_select = e.target.value
-        const url = `https://apis.data.go.kr/6260000/BusanBIMS/stopArrByBstopid?bstopid=${bstop_select}&serviceKey=${api_key}`
         console.log(bstop_select)
-        let xml2json = new XMLtoJSON()
-        let strjson = xml2json.fromStr(url, 'string') // string 형식
+        const url = `https://apis.data.go.kr/6260000/BusanBIMS/stopArrByBstopid?bstopid=${bstop_select}&serviceKey=${api_key}`
+        // let xml2json = new XMLtoJSON()
+        // let strjson = xml2json.fromStr(url, 'string') // string 형식
 
-        console.log(strjson)
-        fetch(strjson).then((res) => res.json().then((data) => {}))
+        // console.log(strjson)
+        // var xml = '<e name="value">text</e>',
+        ;(dom = parseXml(url)),
+          (json = xml2json(dom)),
+          (xml2 = json2xml(eval(json)))
+        console.log(xml2)
+
+        // fetch(url).then((res) => {
+        //   ;(dom = parseXml(res)),
+        //     (json = xml2json(dom)),
+        //     (xml2 = json2xml(eval(json)))
+        //   console.log(xml2)
+        // res.json().then((data) => {})
+        // })
       })
     </script>
   </body>

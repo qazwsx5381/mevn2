@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML API Geolocation</title>
+  </head>
+  <body>
+    <h1>Geolocation을 이용한 위도와 경도 찾기</h1>
+    <button onclick="findLocation()">현재 위치의 위도와 경도</button>
+    <p id="myLocation"></p>
+    <script>
+      const loc = document.getElementById('myLocation')
+      function findLocation() {
+        if (navigator.geolocation) {
+          console.log(
+            navigator.geolocation.getCurrentPosition(showYourLocation)
+          )
+        } else {
+          loc.innerHTML = '이 브라우저에서 geolocation기능이 동작되지 않습니다.'
+        }
+      }
+      function showYourLocation(position) {
+        loc.innerHTML =
+          '현재 사용자는 위도는 ' +
+          position.coords.latitude +
+          '이고 경도는 ' +
+          position.coords.longitude +
+          '입니다.'
+      }
+    </script>
+  </body>
+</html>
