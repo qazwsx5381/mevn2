@@ -3,6 +3,7 @@ const Photo = require('./photo.js')
 const fs = require('fs')
 const path = require('path')
 const mongoDB = 'mongodb://127.0.0.1/my_database'
+const secure_DB = 'mongodb://YC:1234@127.0.0.1:27017/d1'
 
 mongoose.set('strictQuery', false)
 mongoose

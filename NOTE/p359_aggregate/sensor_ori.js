@@ -6,12 +6,11 @@ const HOST = process.env.dbhost
 console.log(USER, PWD, HOST)
 const DB = 'd1'
 const mongodbURL = `mongodb://${USER}:${PWD}@${HOST}/${DB}`
-// mongodb://YC:1234@127.0.0.1:27017/d1
 // mongoose.set('useFindAndModify',false) // 6.0 이후 자동관리
 mongoose.set('strictQuery', false) // 권장사항
 mongoose
   .connect(mongodbURL, { useNewUrlParser: true })
   .then(() => console.log('connection succesful'))
   .catch((err) => console.error(err))
-const mycol = require('./schema.js')
+const mycol = require('./sensor.js')
 module.exports = mycol

@@ -1,9 +1,10 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
+
+const VSchema = require('./schema.cjs')
 const USER = process.env.dbid
 const PWD = process.env.dbpwd
 const HOST = process.env.dbhost
-console.log(USER, PWD, HOST)
 const DB = 'd1'
 const mongodbURL = `mongodb://${USER}:${PWD}@${HOST}/${DB}`
 // mongodb://YC:1234@127.0.0.1:27017/d1
@@ -13,5 +14,4 @@ mongoose
   .connect(mongodbURL, { useNewUrlParser: true })
   .then(() => console.log('connection succesful'))
   .catch((err) => console.error(err))
-const mycol = require('./schema.js')
-module.exports = mycol
+module.exports = VSchema

@@ -4,7 +4,7 @@ const main = async () => {
   const _data = {
     albumId: 12012,
     id: 312,
-    title: '홍길동',
+    title: '배트맨',
     url: 'google.com',
     thumbnailUrl: 'https://naver.com'
   }

@@ -4,9 +4,9 @@ const main = async () => {
   const t = await mycol
     .find(
       {
-        title: { $eq: '홍길동' }
+        title: /^슈/
       },
-      { _id: 0 }
+      { _id: 0, __v: 0 }
     )
     .lean() // p349 설명 효율적 메소드
   console.log(t)
