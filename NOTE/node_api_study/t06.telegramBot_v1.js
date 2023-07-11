@@ -2,14 +2,9 @@ require('dotenv').config()
 const axios = require('axios')
 const cheerio = require('cheerio')
 const TelegramBot = require('node-telegram-bot-api')
-const date = new Date()
 
-function time() {
-  const hour = ('0' + date.getHours()).slice(-2)
-  return hour
-}
 
-const token = process.env.telegram_token
+const token = process.env.telegram
 
 const bot = new TelegramBot(token, { polling: true })
 

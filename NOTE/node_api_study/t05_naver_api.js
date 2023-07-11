@@ -31,6 +31,7 @@ app.get('/trans', function (req, res) {
   }
   request.post(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
+      console.log(response)
       res.writeHead(200, { 'Content-Type': 'text/json;charset=utf-8' })
       const trans = JSON.parse(body)
       console.log(trans.message.result.translatedText)
