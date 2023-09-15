@@ -1,0 +1,10 @@
+2023/09/15 12:08:33 [error] 13724#3996: *1 CreateFile() "D:\RYC\MEVN\nginx-1.24.0/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/15 12:10:31 [error] 13724#3996: *4 CreateFile() "D:\RYC\MEVN\nginx-1.24.0/html/ㅁㅁ" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /%E3%85%81%E3%85%81 HTTP/1.1", host: "localhost"
+2023/09/15 12:10:36 [error] 13724#3996: *4 CreateFile() "D:\RYC\MEVN\nginx-1.24.0/html/aa" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /aa HTTP/1.1", host: "localhost"
+2023/09/15 12:11:30 [error] 13724#3996: *4 CreateFile() "D:\RYC\MEVN\nginx-1.24.0/html/aa" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /aa HTTP/1.1", host: "localhost"
+2023/09/15 12:11:31 [error] 13724#3996: *4 CreateFile() "D:\RYC\MEVN\nginx-1.24.0/html/aa" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /aa HTTP/1.1", host: "localhost"
+2023/09/15 12:11:32 [error] 13724#3996: *4 CreateFile() "D:\RYC\MEVN\nginx-1.24.0/html/aa" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /aa HTTP/1.1", host: "localhost"
+2023/09/15 12:56:33 [emerg] 780#14248: cannot load certificate "D:	ensorProject\v\config\cert.pem": BIO_new_file() failed (SSL: error:0200107B:system library:fopen:Unknown error:fopen('D:	ensorProject\v\config\cert.pem','r') error:2006D002:BIO routines:BIO_new_file:system lib)
+2023/09/15 12:56:33 [alert] 7468#12932: worker process 780 exited with code 1
+2023/09/15 12:56:33 [alert] 7468#12932: could not respawn worker
+2023/09/15 12:56:45 [emerg] 14064#2584: cannot load certificate "D:	ensorProject\v\config\cert.pem": BIO_new_file() failed (SSL: error:0200107B:system library:fopen:Unknown error:fopen('D:	ensorProject\v\config\cert.pem','r') error:2006D002:BIO routines:BIO_new_file:system lib)
